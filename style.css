@@ -1,0 +1,855 @@
+.splash{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    z-index:200;
+    color: black;
+    text-align: center;
+    line-height: 90vh;
+}
+
+.splash.display-none {
+    position: fixed;
+    top: -100%; /* Updated property for slide-down effect */
+    opacity: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    z-index: -10;
+    color: black;
+    text-align: center;
+    line-height: 90vh;
+    transition: all 0.5s;
+}
+
+.splash.display-block {
+    top: 0; /* Displaying the splash screen at the top when active */
+    opacity: 1;
+}
+
+
+
+@keyframes fadeIn{
+    to{
+        opacity: 100;
+    }
+}
+.fade-in{
+    opacity: 0;
+    background-color: black;
+    animation: fadeIn 10s ease-in forwards;
+}
+#intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 36px;
+    color:black; /* Set the text color to white */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      /*---------------------------Header---------------------------*/
+
+
+      
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+a{
+  text-decoration: none ;
+  color:whitesmoke;
+  transition:0.3s; 
+}
+ul{
+  list-style:none;
+}
+img{
+  max-width: 100%;
+}
+body{
+  font-family: 'Lexend', sans-serif;
+  font-size:16px;
+  line-height:24px; 
+  background-color:#202020;
+}
+.container{
+  width: 1170px;
+  margin:auto;
+}
+
+
+
+
+      /*---------------------------Header---------------------------*/
+
+.header-area{
+  padding:25px 0;
+  transition: padding .3s;
+  background-color:#222629;
+}
+
+.header-area.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background-color:#86C232;
+  padding: 5px;
+}
+
+.header{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding-bottom: 2rem; */
+} 
+.logo {
+  display: flex;
+  align-items: center;
+  position: relative; 
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.logo .fa-bolt {
+  color:#86C232;
+  font-size: 19.5px;
+  position: absolute; 
+  top: 60%;
+  left: 100%; 
+  transform: translate(-50%, -50%); 
+  z-index: 1; 
+}
+
+.signature {
+  width: 100px; 
+  height:auto; 
+  margin-right: 10px; 
+}
+
+.header ul li:first-child {
+  margin-right: auto; 
+}  
+
+.header ul{
+  display: flex;
+  align-items: center; 
+}
+.header ul li{
+  margin: 0 15px;
+}
+.header ul li a{
+  text-transform: capitalize;
+  display: block;
+}
+.header ul li a.active{
+  color:#86C232;
+  ;
+} 
+.header ul li a:hover{
+  color:#86C232;
+}
+.header .menu_icon{
+  color:white;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+}
+
+
+/*---------------------------HomePage--------------------------*/
+
+.FirstElement{
+   display:flex;
+   justify-content: space-around;
+   align-items: center;
+   padding-top: 5rem; 
+} 
+
+.FirstElement.adjusted-padding {
+  padding-top: 40px; 
+}
+
+.FirstElement .profile-photo{
+  width: 300px;
+  height:  300px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 15px solid #444444;
+  box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5)
+}
+profile-photo .img{
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+}
+.FirstElement .profile-photo img:hover{
+  transform: scale(1.2);
+}
+.profile-text{
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+}
+.profile-text h5{
+  color: #e5e5e5;
+  font-size: 14px;
+}
+.profile-text h1{
+  
+    margin-right: 10px; /* Adjust the spacing between "HI I AM" and your name */
+    color: #86C232;
+  font-size: 3rem; 
+}
+.profile-text p{
+  color:#e5e5e5;
+}
+.profile-text .social i{
+  color : white;
+  font-size: 30px;
+  margin-top: 30px;
+  margin-right: 40px;
+  transition: 0.5s;
+}
+
+.profile-text .social i:hover{
+  color:#86C232;
+  transform: rotate(360deg);
+}
+
+
+
+ /*---------------------------About---------------------------*/
+
+.about-area{
+  padding-top: 130px;
+  background-color: #202020;
+}
+.about{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom:50px;
+}
+.about-content{
+  flex-basis: 60%;
+}
+.about-content h4{
+  color: #fed700;
+  font-size: 40px;
+  line-height: 70px;
+  text-transform: capitalize;
+}
+.about-content ul {
+  color:#fff;
+  text-align: justify;
+}
+
+.about-content ul li {
+  list-style-type: disc;
+  margin-bottom: 10px;
+}
+
+.about-skills{
+  flex-basis: 35%;
+}
+.about-skills ul li{
+  border-bottom: 1px dashed #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 18px;
+}
+.about-skills ul li:last-child{
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+
+/*---------------------------Buttons---------------------------*/
+
+.btn-group{
+  margin: 45px 0;
+}
+.btn-group .btn{
+  border-color: #d5d5d5;
+  color: #fff;
+  background-color: #333;
+  padding:12px 25px;
+  margin: 5px 0;
+  margin-right: 7px;
+  border-radius: 30px;
+  border: 2px solid #e5e5e5;
+  box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+}
+.btn.active{
+  border-color: #86C232;
+}
+
+
+/*---------------------------Education & Internship---------------------------*/
+
+.education-content .row{
+  display: flex;
+  border-radius: 5px;
+  height: 400px;
+  margin-bottom: 250px;
+}
+
+.education-content .title{
+  color: #86C232;
+}
+.education-content .row .education,
+.education-content .row .internship
+{
+  color: #e5e5e5;
+  flex:0 0 50%;
+  max-width: 50%;
+  margin-top: 30px;
+} 
+.education-content  h3.title{
+  font-size:24px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+.education-content .row.timeline-box{
+  flex:0 0 100%;
+  max-width: 100%;  
+}
+.education-content .row .timeline{
+  /* background-color:#e5e5e5; */
+  padding: 30px 15px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  width: 100%;
+  position: relative;
+}
+.headcompany{
+           color: #86C232;
+}
+.education-content .row .timeline-item{
+  position:relative;
+  padding-left: 57px;
+  padding-bottom: 50px; 
+}
+.education-content .row  .internship .timeline-item{
+  position:relative;
+  padding-left: 37px;
+  padding-bottom: 30px; 
+}
+.education-content .row .timeline-item:last-child{
+  padding-bottom: 0;
+}
+.education-content .row .timeline-item::before{
+  content: "";
+  width: 1px;
+  position: absolute;
+  height: 100%;
+  left: 7px;
+  top: 0;
+  background-color: #86C232;  
+}
+.education-content .row .circle-dot{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #e5e5e5;
+}
+.education-content .row .timeline-title  {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.education-content .row .internship .timeline-title  {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.education-content .row .timeline-text{
+  line-height: 25px;
+  font-size: 16px;
+  text-align: justify;
+}
+
+
+
+/*---------------------------Projects---------------------------*/
+.project-content{
+  padding: 90px 0;
+  /* color:#fff;  */
+}
+.project-title{
+  margin-bottom: 60px;
+  text-align: center;
+}
+.project-title h4{
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 40px;
+  color: #86C232;
+  margin-bottom: 20px;
+}
+.project-title p{
+  color: #e5e5e5;
+}
+.projects{
+  display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+}
+.project{
+    /* padding: 30px 15px; */
+    color: #e5e5e5;
+    border: 2px solid #e5e5e5;
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    padding: 25px;
+    text-align: center;
+    flex-basis: 32%;
+    transition: .3s;
+}
+.project i{
+  background-color:#86C232;
+  width: 60px;
+  height: 60px;
+  color: #333;
+  font-size: 26px;
+  line-height: 60px;
+  border-radius: 50%;
+}
+.project h4{
+  font-size: 26px;
+  text-transform: capitalize;
+  margin: 20px 0;
+}
+.project p{
+  text-align: justify;
+}
+.project:hover{
+  border-color: #86C232;
+}
+
+
+
+/*---------------------------Contact Me---------------------------*/
+.contact-content{
+  padding: 100px 0;
+  color: #fff;
+  text-align: center;
+}
+.contact-content .contact-title h4{
+  font-size: 40px;
+  text-transform: capitalize;
+  color: #86C232;
+  padding-bottom: 10px;
+}
+.contact-content .contact-title p{
+  padding-bottom: 20px;
+}
+.contact{
+  max-width: 700px;
+  margin: auto;
+}
+.contact input,.contact textarea{
+  width: 100%;
+  padding: 15px;
+  border: 0;
+  margin-bottom: 10px;
+}
+
+.contact .submit{
+  width: auto;
+  background-color: #86C232;
+  padding: 10px 40px;
+  font-weight:bold ;
+  font-size: 18px;
+}
+.contact .submit:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+#msg{
+  color: #fff;
+  font-size: 20px;
+  margin-top: -8px;
+  display: block;
+}
+
+
+
+
+
+
+/*---------------------------Footer---------------------------*/
+.footer {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 15px 0 26px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer .message {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 10px;
+  }
+  
+  .copyright {
+    font-size: 12px;
+  }
+
+
+
+
+ /*------------------- Responsive Design on small screen -------------------*/
+
+/* Medium layout */
+@media only screen and (min-width:1000px) and (max-width:1200px){
+  .container{
+    width: 970px;
+  }
+}
+
+@media(max-width:1050px){
+  .FirstElement{ 
+    flex-direction: column;
+    padding-top: 2rem;
+  }
+  .profile-text{
+    padding: 40px 0px;
+  }
+}
+
+
+
+/* tablet layout */
+@media only screen and (min-width:768px) and (max-width:999px){
+  .container{
+    width: 750px;
+  } 
+}  
+
+
+/* Mobile Layout */
+@media  only screen and (min-width:350px) and (max-width:1200px){
+  .container{
+    width: 350px;
+  }
+
+  .header .menu_icon {
+    display: block;
+  }
+  .header ul{
+    display: none;
+  }
+  .header i{
+    color: #e5e5e5;
+  }
+
+  .profile-text{
+    width: 350px;
+  }
+  .FirstElement .profile-text p{
+    text-align: justify;
+  }
+  .about{
+    flex-direction: column;
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+  .about-skills{
+    width: 100%;
+    margin-top: 30px;
+  }
+  .education-content .row {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .education-content .row .education,
+  .education-content .row .internship {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-top: 30px;
+  }
+  .project{
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+  .splash{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    z-index:200;
+    color: black;
+    text-align: center;
+    line-height: 90vh;
+}
+
+.splash.display-none {
+    position: fixed;
+    top: -100%; /* Updated property for slide-down effect */
+    opacity: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    z-index: -10;
+    color: black;
+    text-align: center;
+    line-height: 90vh;
+    transition: all 0.5s;
+}
+
+.splash.display-block {
+    top: 0; /* Displaying the splash screen at the top when active */
+    opacity: 1;
+}
+
+
+}
+
+
+
+
+.splash{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  z-index:200;
+  color: black;
+  text-align: center;
+  line-height: 90vh;
+}
+
+.splash.display-none {
+  position: fixed;
+  top: -100%; /* Updated property for slide-down effect */
+  opacity: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  z-index: -10;
+  color: black;
+  text-align: center;
+  line-height: 90vh;
+  transition: all 0.5s;
+}
+
+.splash.display-block {
+  top: 0; /* Displaying the splash screen at the top when active */
+  opacity: 1;
+}
+
+
+
+@keyframes fadeIn{
+  to{
+      opacity: 100;
+  }
+}
+.fade-in{
+  opacity: 0;
+  background-color: black;
+  animation: fadeIn 10s ease-in forwards;
+}
+#intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 36px;
+  color:black; /* Set the text color to white */
+}
+
+/* the main code portfolio*/
+html {
+  background:black;
+}
+
+
+
+
+
+
+
+/*  knife cute of my name*/
+
+
+.wrap {
+  position: relative;
+ 
+}
+.text {
+  font-size: 4vw;
+  font-family: 'Caveat', cursive;
+  line-height: .8;
+  color: #fffde7;
+  text-transform: uppercase;
+  font-weight: bold;
+  /* background-color: pink; */
+}
+.wrap .text:nth-child(2),
+.wrap .text:nth-child(3),
+.crack {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.wrap .text:nth-child(1) {
+  clip-path: polygon(100% 0, 3% 0, 100% 97%);
+  transition: transform .6s;
+}
+.wrap .text:nth-child(2) {
+  clip-path: polygon(0 3%, 0% 100%, 97% 100%);
+}
+.wrap .text:nth-child(3) {
+  opacity: 1;
+  transition: opacity .1s .6s;
+}
+.crack {
+  background-color:#202020;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 3%, 3% 0, 100% 97%, 97% 100%);
+  transform: translate(-100%, -100%);
+  transition: transform .3s;
+}
+.wrap:hover .crack{
+  transform: translate(0, 0);
+}
+.wrap:hover .text:nth-child(3) {
+  opacity: 0;
+  transition: opacity .1s .3s;
+}
+.wrap:hover .text:nth-child(1) {
+  transition: transform .6s .5s;
+  transform: translate(10%, 10%);
+}
+
+
+
+/*  i m  rolling text of developer...xyz*/
+
+
+.animated-text{
+  font-size: 28px;
+  min-width: 240px;
+  color: white;
+  margin-top: 50px;
+  font-weight: 600;
+
+}
+
+.animated-text span{
+  position: relative;
+}
+
+.animated-text span::before{
+  content: "Developer";
+  color: #86C232;
+  animation: words 20s infinite;
+}
+
+.animated-text span::after{
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: #202020;
+ 
+  border-left: 2px solid #86C232;
+  right: -8px;
+  animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to{
+      border-left: 2px solid #202020;
+  }
+}
+
+@keyframes words {
+  0%,20%{
+      content: "Developer";
+  }
+  21%,40%{
+      content: "ML Enthusiast";
+  }
+  41%,60%{
+      content: "Python Programmer";
+  }
+  61%,80%{
+      content: "Designer";
+  }
+  81%,100%{
+      content: "Electronic junkie";
+  }
+}
+
+@keyframes typing {
+  10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+      width: 0;
+  }
+  5%,20%,25%,40%,45%,60%,65%,80%,85%{
+      width: calc(100% + 8px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
